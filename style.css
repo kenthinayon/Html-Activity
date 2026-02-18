@@ -9,17 +9,26 @@ body {
     line-height: 1.6;
 }
 
+:root {
+    --bg: #f7f9fb;
+        --surface: #ffffff;
+        --primary: #0d6efd; 
+        --accent: #0d6efd; 
+        --muted: #000000; 
+}
+
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%;
-    background: #111;
+    padding: 18px 10%;
+    background: var(--primary);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
 .logo {
-    width: 60px;
+    width: 56px;
 }
 
 .navbar ul {
@@ -27,18 +36,22 @@ body {
     display: flex;
 }
 
-.navbar ul li {
-    margin-left: 20px;
-}
-
 .navbar ul li a {
     text-decoration: none;
-    color: white;
-    font-weight: bold;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 6px 8px;
+    border-radius: 6px;
+    transition: background .18s ease, color .18s ease;
+}
+.navbar ul li a:hover {
+    color: #ffffff;
+    background: rgba(255,255,255,0.08);
 }
 
+
 .navbar ul li a:hover {
-    color: orange;
+    color: rgb(0, 0, 0);
 }
 
 
@@ -49,7 +62,7 @@ section {
 
 
 .main {
-    background: #f4f4f4;
+    background: var(--bg);
     min-height: 90vh;
     display: flex;
     justify-content: center;
@@ -61,7 +74,7 @@ section {
 }
 
 .info span {
-    color: orange;
+    color: var(--accent);
 }
 
 .info p {
@@ -71,24 +84,46 @@ section {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background: orange;
+        background: var(--primary);
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
+        box-shadow: 0 6px 18px rgba(13,110,253,0.08);
 }
 
 .btn:hover {
-    background: darkorange;
+        background: #0b5ed7;
 }
 
 
 .about {
-    background: #fff;
+    background: var(--surface);
+    color: var(--muted);
 }
 
 
 .contact {
-    background: #f4f4f4;
+    background: var(--bg);
+    color: var(--muted);
+}
+
+.contact-links {
+    list-style: none;
+    padding-left: 0;
+    margin: 10px 0 20px 0;
+}
+
+.contact-links li {
+    margin: 6px 0;
+}
+
+.contact .link {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.contact .link:hover {
+    color: var(--accent);
 }
 
 
