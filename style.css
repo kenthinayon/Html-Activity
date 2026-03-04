@@ -10,11 +10,12 @@ body {
 }
 
 :root {
-    --bg: #f7f9fb;
-        --surface: #ffffff;
-        --primary: #0d6efd; 
-        --accent: #0d6efd; 
-        --muted: #000000; 
+    --bg: #eef2f5;
+    --surface: #ffffff;
+    --primary: #1f3a5f;
+    --accent: #2c4f7a;
+    --muted: #2a2f36;
+    --text-light: #f7f9fc;
 }
 
 
@@ -24,7 +25,7 @@ body {
     align-items: center;
     padding: 18px 10%;
     background: var(--primary);
-    border-bottom: 1px solid rgba(0,0,0,0.06);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .logo {
@@ -38,20 +39,15 @@ body {
 
 .navbar ul li a {
     text-decoration: none;
-    color: #ffffff;
+    color: var(--text-light);
     font-weight: 600;
     padding: 6px 8px;
     border-radius: 6px;
     transition: background .18s ease, color .18s ease;
 }
 .navbar ul li a:hover {
-    color: #ffffff;
-    background: rgba(255,255,255,0.08);
-}
-
-
-.navbar ul li a:hover {
-    color: rgb(0, 0, 0);
+    color: var(--text-light);
+    background: rgba(255,255,255,0.15);
 }
 
 
@@ -79,20 +75,23 @@ section {
 
 .info p {
     margin: 20px 0;
+    color: var(--muted);
 }
 
 .btn {
     display: inline-block;
     padding: 10px 20px;
-        background: var(--primary);
-    color: white;
+    background: var(--primary);
+    color: var(--text-light);
     text-decoration: none;
     border-radius: 6px;
-        box-shadow: 0 6px 18px rgba(13,110,253,0.08);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(31,58,95,0.15);
 }
 
 .btn:hover {
-        background: #0b5ed7;
+    background: var(--accent);
 }
 
 
@@ -124,6 +123,51 @@ section {
 
 .contact .link:hover {
     color: var(--accent);
+}
+
+.links-group {
+    margin: 12px 0 18px;
+}
+
+.contact-form {
+    width: min(560px, 100%);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #c7d2de;
+    border-radius: 6px;
+    font-size: 15px;
+    color: var(--muted);
+    background: var(--surface);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(31,58,95,0.14);
+}
+
+.form-status {
+    min-height: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.form-status.success {
+    color: #1f6a3f;
+}
+
+.form-status.error {
+    color: #8a2020;
 }
 
 

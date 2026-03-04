@@ -20,14 +20,25 @@
         <h2>Contact Me</h2>
         <p>Email: <a href="mailto:kent.hinayon@urios.edu.ph">kent.hinayon@urios.edu.ph</a></p>
         <p>Phone: <a href="tel:+67676767676767">+67676767676767</a></p>
-        <p>
-            Links:
+        <div class="links-group">
+            <p>Links:</p>
             <ul class="contact-links">
                 <li><a href="https://github.com/kenthinayon" class="link" target="_blank" rel="noopener">GitHub</a></li>
             </ul>
-        </p>
-        <a href="mailto:kent.hinayon@urios.edu.ph" class="btn">Send Email</a>
+        </div>
+
+        <form id="contactForm" class="contact-form">
+            <input type="text" id="fromName" name="from_name" placeholder="Your Name" required>
+            <input type="email" id="fromEmail" name="from_email" placeholder="Your Email" required>
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Email</button>
+            <p id="formStatus" class="form-status" aria-live="polite"></p>
+        </form>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
